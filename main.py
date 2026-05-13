@@ -4,6 +4,8 @@ from logger import log_state
 from player import Player
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
+from logger import log_event
+import sys
 
 def main():
 
@@ -28,7 +30,7 @@ def main():
     
     Player.containers = (updatable, drawable)
     Asteroid.containers = (asteroids, updatable, drawable)
-    AsteroidField.containers(updatable)
+    AsteroidField.containers = (updatable,)
 
     player = Player(x, y)
     asteroid_field = AsteroidField()
@@ -41,9 +43,16 @@ def main():
                 return
 
         updatable.update(dt)
+
+        for object in asteroids:
+            if object.collides_with(player):
+                log_event("player_hit")
+                print("Game over!")
+                sys.exit()
+
         screen.fill("black")
         for draw in drawable:
-            player.draw(screen)
+            draw.draw(screen)
         pygame.display.flip()
         Second = Clock.tick(60)
         dt = Second / 1000
