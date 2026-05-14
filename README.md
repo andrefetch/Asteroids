@@ -1,1 +1,1 @@
-[Asteroids Picture](asteroidsDemoPic.webp)
+![Asteroids Picture](asteroidsDemoPic.webp)
