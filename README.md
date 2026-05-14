@@ -1,0 +1,1 @@
+[Asteroids Picture](asteroidsDemoPic.webp)
