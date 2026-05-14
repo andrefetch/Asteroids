@@ -5,7 +5,7 @@
 
 This was a quick project I made using pygame to practice my skills with object oriented programming. This included topics such as: ```Classes, Objects, Inheritence, Polymorpishm, Abstraction, and Encapsulation.```
 
-# File Strucuture
+## File Strucuture
 ```
 .
 ├── asteroid.py
@@ -21,4 +21,10 @@ This was a quick project I made using pygame to practice my skills with object o
 ├── README.md
 ├── shot.py
 └── uv.lock
+```
+
+## Installation
+
+```
+$ git clone https://github.com/andrefetch/Asteroids.git
 ```
